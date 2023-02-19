@@ -12,189 +12,189 @@ Config.set('graphics','height',740)
 Builder.load_string("""
 <MyLayout>
     BoxLayout:
-		orientation: 'vertical'
-		size: root.width,root.height
+	orientation: 'vertical'
+	size: root.width,root.height
 
-		TextInput:
-			id: calc_input
-			text: '0'
-			halign: 'right'
-			font_size: 65
-			size_hint: (1, .15)
+	TextInput:
+	    id: calc_input
+	    text: '0'
+	    halign: 'right'
+	    font_size: 65
+	    size_hint: (1, .15)
 
-		GridLayout:
-			cols: 4
-			rows: 7
+	GridLayout:
+	    cols: 4
+	    rows: 7
             spacing: 5
             
             Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '%'
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '%'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.percentge()
+		on_press: root.percentge()
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'C'
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: 'C'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.clear()
+		on_press: root.clear()
 
-			Button:
-				id: clear
-				size_hint:(.2,.2)
-				font_size: 50
-				text: u'\u00AB'
+	    Button:
+		id: clear
+		size_hint:(.2,.2)
+		font_size: 50
+		text: u'\u00AB'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.remove()
+		on_press: root.remove()
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '/'
+	    Button:
+	        size_hint:(.2,.2)
+	        font_size: 50
+	        text: '/'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.math_sign('/')
+	        on_press: root.math_sign('/')
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '7'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.button_press(7)
+	   Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '7'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.button_press(7)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '8'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.button_press(8)
+	   Button:
+		size_hint:(.2,.2)
+		font_size: 50
+	        text: '8'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.button_press(8)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '9'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.button_press(9) 
+	   Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '9'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.button_press(9) 
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '*'
+	   Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		ext: '*'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.math_sign('*')			
+		on_press: root.math_sign('*')			
 			
             Button:
-			    size_hint:(.2,.2)
-				font_size: 50
-				text: '4'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.button_press(4)
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '4'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.button_press(4)
 						
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '5'
-				background_color:(247/255,184/255,56/255,1)	
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '5'
+		background_color:(247/255,184/255,56/255,1)	
                 on_press: root.button_press(5)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '6'
-				background_color:(247/255,184/255,56/255,1)   
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '6'
+		background_color:(247/255,184/255,56/255,1)   
                 on_press: root.button_press(6)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '-'
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '-'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.math_sign('-')
+		on_press: root.math_sign('-')
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '1'
-			    background_color:(247/255,184/255,56/255,1)	
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '1'
+		background_color:(247/255,184/255,56/255,1)	
                 on_press: root.button_press(1)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '2'
-				background_color:(247/255,184/255,56/255,1)   
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '2'
+		background_color:(247/255,184/255,56/255,1)   
                 on_press: root.button_press(2)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '3'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.button_press(3)	   
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '3'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.button_press(3)	   
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '+'
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '+'
                 background_color:(14/255,73/255,176/255,1) 
-				on_press: root.math_sign('+')
+		on_press: root.math_sign('+')
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '+/-'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.pos_neg()
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '+/-'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.pos_neg()
 						
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '0'
-			    background_color:(247/255,184/255,56/255,1)
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '0'
+		background_color:(247/255,184/255,56/255,1)
                 on_press: root.button_press(0)
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '.'
-				background_color:(247/255,184/255,56/255,1)
-				on_press: root.dot()
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '.'
+		background_color:(247/255,184/255,56/255,1)
+		on_press: root.dot()
 
-			Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '='
+	    Button:
+		size_hint:(.2,.2)
+		font_size: 50
+		text: '='
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.equals()	
+		on_press: root.equals()	
             
             Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'sin'
+		size_hint:(.2,.2)
+		font_size: 50
+		text: 'sin'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.sin()	
+		on_press: root.sin()	
             
             Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'cos'
+		size_hint:(.2,.2)
+		font_size: 50
+		text: 'cos'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.cos()	
+		on_press: root.cos()	
             
             Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'tan'
+		size_hint:(.2,.2)
+		font_size: 50
+		text: 'tan'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.tan()	
+		on_press: root.tan()	
             
             Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'ln'
+		size_hint:(.2,.2)
+		font_size: 50
+		text: 'ln'
                 background_color:(14/255,73/255,176/255,1)
-				on_press: root.ln()			   
+		on_press: root.ln()			   
     """)
 
 class MyLayout(Widget):
