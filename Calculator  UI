@@ -1,5 +1,3 @@
-
-
 import math
 from re import S
 from unittest import result
