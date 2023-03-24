@@ -1,5 +1,4 @@
 import math
-from re import S
 from unittest import result
 from kivy.app import App
 from kivy.uix.widget import Widget
