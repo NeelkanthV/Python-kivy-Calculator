@@ -160,68 +160,68 @@ Builder.load_string("""
 			     background_color:(247/255,184/255,56/255,1)
 			     on_press: root.dot()
            
-			  Button:
-			      size_hint:(.2,.2)
-			      font_size: 50
-			      text: '='
-                              background_color:(14/255,73/255,176/255,1)
-			      on_press: root.equals()	
+			 Button:
+			     size_hint:(.2,.2)
+			     font_size: 50
+			     text: '='
+                             background_color:(14/255,73/255,176/255,1)
+			     on_press: root.equals()	
+            
+                         Button:
+			     size_hint:(.2,.2)
+			     font_size: 50
+			     text: 'sin'
+                             background_color:(14/255,73/255,176/255,1)
+			     on_press: root.sin()	
             
                           Button:
 			      size_hint:(.2,.2)
 			      font_size: 50
-			      text: 'sin'
+			      text: 'cos'
                               background_color:(14/255,73/255,176/255,1)
-			      on_press: root.sin()	
+			      on_press: root.cos()	
+            
+                          Button:
+			      size_hint:(.2,.2)
+			      font_size: 50
+			      text: 'tan'
+                              background_color:(14/255,73/255,176/255,1)
+			      on_press: root.tan()
             
                            Button:
 			       size_hint:(.2,.2)
 			       font_size: 50
-			       text: 'cos'
-                               background_color:(14/255,73/255,176/255,1)
-			       on_press: root.cos()	
+			       text: '**'
+                               background_color:(14/255,73/255,176/255,1) 
+			       on_press: root.math_sign('**')	
             
                            Button:
 			       size_hint:(.2,.2)
 			       font_size: 50
-			       text: 'tan'
+			       text: 'ln'
                                background_color:(14/255,73/255,176/255,1)
-			       on_press: root.tan()
+			       on_press: root.ln()		
             
-                            Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: '**'
-                                background_color:(14/255,73/255,176/255,1) 
-				on_press: root.math_sign('**')	
-            
-                            Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'ln'
-                                background_color:(14/255,73/255,176/255,1)
-				on_press: root.ln()		
-            
-                            Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'sqrt'
-                                background_color:(14/255,73/255,176/255,1)
-				on_press: root.sqrt()	
+                           Button:
+			       size_hint:(.2,.2)
+			       font_size: 50
+			       text: 'sqrt'
+                               background_color:(14/255,73/255,176/255,1)
+			       on_press: root.sqrt()	
     	
-                            Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'log'
-                                background_color:(14/255,73/255,176/255,1)
-				on_press: root.log()
+                           Button:
+			       size_hint:(.2,.2)
+			       font_size: 50
+			       text: 'log'
+                               background_color:(14/255,73/255,176/255,1)
+			       on_press: root.log()
             
-                            Button:
-				size_hint:(.2,.2)
-				font_size: 50
-				text: 'pi'
-                                background_color:(14/255,73/255,176/255,1)
-				on_press: root.pi()				   
+                           Button:
+			       size_hint:(.2,.2)
+			       font_size: 50
+			       text: 'pi'
+                               background_color:(14/255,73/255,176/255,1)
+			       on_press: root.pi()				   
     """)
 
 class MyLayout(Widget):
